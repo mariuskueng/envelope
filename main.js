@@ -10,21 +10,22 @@ $('#arrow_click').on('click', function(){
 });
 
 function animate_flip(el){
+    /*
+    1. Lasche verlängern
+    2. Band verkürzen/"herunterziehen"
+    3. Schriftzug auf gleicher Position halten/animieren damit es nicht verschoben wird
+    */
+
     var $el = el;
     $el.css('-webkit-animation', 'none');
     $el.css('border-top-width', $(window).height());
     $('.flip').css('top', $(window).height());
     var timeout = window.setTimeout(animate_sides, 1000);
-    /*
-    1. Lasche verlängern
-    2. Band verkürzen/"herunterziehen"
-    3. Schriftzug auf gleicher Position halten/animieren damit es nicht verschoben wird
-
-    */
-
 }
 
 function animate_sides(){
     $('.side.left').addClass('animated_left');
     $('.side.right').addClass('animated_right');
+    //$('.flip').css('backgroundPosition', "50% -100%");
+
 }
