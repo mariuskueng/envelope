@@ -25,7 +25,6 @@ function animate_flip(el){
 }
 
 function animate_sides(){
-    console.log('asdf');
-    var $el = $('.side.left, .side.right');
-    $el.addClass('animated');
+    $('.side.left').addClass('animated_left');
+    $('.side.right').addClass('animated_right');
 }
