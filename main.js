@@ -20,10 +20,12 @@ function animate_flip(el){
     $el.css('-webkit-animation', 'none');
     $el.css('border-top-width', $(window).height());
     $('.flip').css('top', $(window).height());
+    $('.flip').addClass('animated_background_position');
     var timeout = window.setTimeout(animate_sides, 1000);
 }
 
 function animate_sides(){
+
     $('.side.left').addClass('animated_left');
     $('.side.right').addClass('animated_right');
     //$('.flip').css('backgroundPosition', "50% -100%");
