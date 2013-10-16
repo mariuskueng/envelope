@@ -12,6 +12,33 @@ $(function(){
 
         // Modernizr.csstransitions = false;
     });
+
+    var $satin = $(".moto_link").toggleClass("satin");
+    var radius = '85%'; // VERLAUFSRADIUS
+
+    var radius_px = screen.width / 100 * parseInt(radius);
+    var originalBGplaypen = $satin.css("background-color"),
+        x, y, xy, bgWebKit, bgMoz,
+        lightColor = "rgba(150,150,150,0.75)", // FARBE DEFINIEREN
+        gradientSize = radius_px;
+
+        $('body').mousemove(function(e) {
+            offset = $satin.offset();
+            x  = e.pageX - offset.left;
+            y  = e.pageY - offset.top;
+            xy = x + " " + y;
+            bgWebKit = "-webkit-gradient(radial, " + xy + ", 0, " + xy + ", " + gradientSize + ", from(" + lightColor + "), to(rgba(255,255,255,0.0))), " + originalBGplaypen;
+            bgMoz    = "-moz-radial-gradient(" + x + "px " + y + "px 45deg, circle, " + lightColor + " 0%, " + originalBGplaypen + " " + gradientSize + "px)";
+            bg    = "radial-gradient(" + x + "px " + y + "px 45deg, circle, " + lightColor + " 0%, " + originalBGplaypen + " " + gradientSize + "px)";
+
+            $satin
+                .css({ background: bgWebKit })
+                .css({ background: bgMoz })
+                .css({ background: bg });
+
+        }).mouseleave(function() {
+            //$satin.css({ background: originalBGplaypen }); // JE NACHDEM
+        });
 });
 
 function animate_flip(arrow_click, flip){
@@ -19,6 +46,7 @@ function animate_flip(arrow_click, flip){
     1. Lasche verlängern
     2. Band verkürzen/"herunterziehen"
     3. Schriftzug auf gleicher Position halten/animieren damit es nicht verschoben wird
+    4. Die Seiten auf die Seite abdrehen und nach unten fallen lassen
     */
 
     if(Modernizr.csstransitions){
@@ -46,5 +74,5 @@ function animate_sides(){
         $('.side.left').animate({'left': '-100%'});
         $('.side.right').animate({'right': '-100%'});
     }
-
+    window.setTimeout(function(){$('.side').remove();}, 2000);
 }
