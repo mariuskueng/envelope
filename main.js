@@ -5,8 +5,12 @@ http://designshack.net/articles/css/code-a-simple-folded-corner-effect-with-css/
 
 */
 
-$('#arrow_click').on('click', function(){
-    animate_flip($(this));
+$(function(){
+
+    $('#arrow_click').on('click', function(){
+        animate_flip($(this));
+
+    });
 });
 
 function animate_flip(el){

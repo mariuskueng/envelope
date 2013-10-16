@@ -3,7 +3,8 @@ body{
     background: #69f5c8;
     font-family: Helvetica;
 }
-.wrapper{
+.envelope{
+    position: fixed;
     height: 100%;
     width: 100%;
 }
