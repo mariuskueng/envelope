@@ -50,11 +50,21 @@ function animate_flip(arrow_click, flip){
     */
 
     if(Modernizr.csstransitions){
-        flip.css('-webkit-transition', 'all 1s ease-in-out');
-        arrow_click.css('-webkit-animation', 'none');
+        flip.addClass('animated_background_position');
+        flip.css({
+            '-webkit-transition': 'all 1s ease-in-out',
+            '-moz-transition': 'all 1s ease-in-out',
+            '-ms-transition': 'all 1s ease-in-out',
+            'transition': 'all 1s ease-in-out'
+        });
+        arrow_click.css({
+            '-webkit-animation': 'none',
+            '-moz-animation': 'none',
+            '-ms-animation': 'none',
+            'animation': 'none',
+        });
         arrow_click.css('border-top-width', $(window).height());
         flip.css('top', $(window).height());
-        flip.addClass('animated_background_position');
     }
     else{
         arrow_click.animate({'border-top-width': $(window).height()}, 500);
@@ -72,7 +82,9 @@ function animate_sides(){
     }
     else{
         $('.side.left').animate({'left': '-100%'});
-        $('.side.right').animate({'right': '-100%'});
+        $('.side.right').animate({'right': '-100%'}, function(){
+            $('.side').remove();
+        });
     }
     window.setTimeout(function(){$('.side').remove();}, 2000);
 }

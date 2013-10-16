@@ -116,7 +116,19 @@ a{
     box-shadow: rgba(0,0,0,0.65) 0px 9px 20px 0px;
     -webkit-animation: swing 1.5s ease-in-out 0s infinite alternate;
     -webkit-transition: border-width 1s;
+    -moz-animation: swing 1.5s ease-in-out 0s infinite alternate;
+    -moz-transition: border-width 1s;
+    -o-animation: swing 1.5s ease-in-out 0s infinite alternate;
+    -o-transition: border-width 1s;
+    -ms-animation: swing 1.5s ease-in-out 0s infinite alternate;
+    -ms-transition: border-width 1s;
+    animation: swing 1.5s ease-in-out 0s infinite alternate;
+    transition: border-width 1s;
     cursor: pointer;
     border: 0px solid #FFF;
 }
 @-webkit-keyframes swing { from { height: 119px; } to { height: 129px; }  }
+@-moz-keyframes swing { from { height: 119px; } to { height: 129px; }  }
+@-ms-keyframes swing { from { height: 119px; } to { height: 129px; }  }
+@-o-keyframes swing { from { height: 119px; } to { height: 129px; }  }
+@keyframes swing { from { height: 119px; } to { height: 129px; }  }
