@@ -13,6 +13,7 @@ body{
     top: 0;
     bottom: 0;
     width: 42.5%;
+    height: 100%;
     z-index: 100;
 }
 .side, .flip{
@@ -39,7 +40,6 @@ body{
     left: 42.5%;
     right: 42.5%;
     z-index: 100;
-    /*top: 50px;*/
 }
 
 .flip{
@@ -47,7 +47,6 @@ body{
     background-position: center 50%;
     background-size: 100.5%;
     position: absolute;
-    -webkit-transition: all 1s ease-in-out;
     width: 100%;
     height: 100%;
     border-left: 1px dashed #9d9d9c;
