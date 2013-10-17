@@ -50,21 +50,14 @@ function animate_flip(arrow_click, flip){
     */
 
     if(Modernizr.csstransitions){
-        flip.addClass('animated_background_position');
-        flip.css({
-            '-webkit-transition': 'all 1s ease-in-out',
-            '-moz-transition': 'all 1s ease-in-out',
-            '-ms-transition': 'all 1s ease-in-out',
-            'transition': 'all 1s ease-in-out'
-        });
+
         arrow_click.css({
-            '-webkit-animation': 'none',
-            '-moz-animation': 'none',
-            '-ms-animation': 'none',
-            'animation': 'none',
+            'border-top-width': $(window).height()
         });
-        arrow_click.css('border-top-width', $(window).height());
-        flip.css('top', $(window).height());
+        flip
+            .addClass('animated_background_position')
+            .css('top', $(window).height())
+        ;
     }
     else{
         arrow_click.animate({'border-top-width': $(window).height()}, 500);
@@ -77,8 +70,8 @@ function animate_flip(arrow_click, flip){
 function animate_sides(){
 
     if(Modernizr.csstransitions){
-        $('.side.left').addClass('animated_left');
-        $('.side.right').addClass('animated_right');
+        $('.side.left').addClass('hinge_left');
+        $('.side.right').addClass('hinge_right');
     }
     else{
         $('.side.left').animate({'left': '-100%'});

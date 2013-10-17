@@ -35,9 +35,9 @@ a{
     top: 50%;
     bottom: 50%;
     width: 50%;
-    padding-bottom: 47.787610619469%;
+    padding-bottom: 47.7%;
     margin-top: -30%;
-    margin-left: -25%;
+    margin-left: -25.1%;
     left: 50%;
     top: 50%;
     background-color: #000;
@@ -104,6 +104,12 @@ a{
     height: 100%;
     border-left: 1px dashed #9d9d9c;
     border-right: 1px dashed #9d9d9c;
+    top: 0;
+
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 .arrow{
     background: #FFF url('./arrow.png') no-repeat center center;
