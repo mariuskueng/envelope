@@ -6,6 +6,9 @@ body{
     font-size: 30px;
     background: #50dcb4;
 }
+img.ie{
+    display: none;
+}
 a{
     color: #000;
     text-decoration: none;

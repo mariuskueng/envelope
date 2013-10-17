@@ -1,0 +1,36 @@
+.ie, img.ie{
+    display: block;
+}
+.moto_link, .moto_link img {
+    border:0;
+}
+.right.side, .left.side, .flip{
+    background-image: none;
+}
+img.ie{
+    width: 31%;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+}
+.right.side img{
+    left: 0;
+}
+.left.side img{
+    right: 0;
+}
+.flip img{
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+.arrow{
+    background-image: none;
+    border-bottom: 1px solid #000;
+}
+.arrow img{
+    width: 63px;
+    height: auto;
+}

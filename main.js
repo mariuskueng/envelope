@@ -61,7 +61,9 @@ function animate_flip(arrow_click, flip){
     }
     else{
         arrow_click.animate({'border-top-width': $(window).height()}, 500);
-        flip.animate({'background-position': '50% -77.5%'}, 750);
+        if(!$('html').hasClass('ie')){
+            flip.animate({'background-position': '50% -77.5%'}, 750);
+        }
         flip.animate({'top': $(window).height()}, 250);
     }
     var timeout = window.setTimeout(animate_sides, 1000);
