@@ -19,7 +19,7 @@ $(function(){
     var radius_px = screen.width / 100 * parseInt(radius);
     var originalBGplaypen = $satin.css("background-color"),
         x, y, xy, bgWebKit, bgMoz,
-        lightColor = "rgba(150,150,150,0.75)", // FARBE DEFINIEREN
+        lightColor = "rgba(200,200,200,0.75)", // FARBE DEFINIEREN
         gradientSize = radius_px;
 
         $('body').mousemove(function(e) {
