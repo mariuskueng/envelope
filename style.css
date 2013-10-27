@@ -49,8 +49,9 @@ a{
 }
 .moto_link img {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: -5px;
+    top: -5px;
+    border: 5px solid #50dcb4;
     width: 100%;
 }
 .moto_visit{
