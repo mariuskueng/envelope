@@ -1,33 +1,4 @@
 /*------------------------------------
-	Scroll up of text in middle side
-------------------------------------*/
-.animated_background_position{
-	-webkit-animation-name: animated_background_position_key;
-	-webkit-animation-fill-mode:both;
-	-webkit-animation-duration:1s;
-	-moz-animation-name: animated_background_position_key;
-	-moz-animation-fill-mode:both;
-	-moz-animation-duration:1s;
-	-ms-animation-name: animated_background_position_key;
-	-ms-animation-fill-mode:both;
-	-ms-animation-duration:1s;
-	animation-name: animated_background_position_key;
-	animation-fill-mode:both;
-	animation-duration:1s;
-}
-@-webkit-keyframes animated_background_position_key{ 0% { background-position: center 50%; -webkit-animation-timing-function: ease-in-out;} 100%{ background-position: center -82% }}
-@-moz-keyframes animated_background_position_key{ 0% { background-position: center 50%; -moz-animation-timing-function: ease-in-out;} 100%{ background-position: center -82% }}
-@-ms-keyframes animated_background_position_key{ 0% { background-position: center 50%; -ms-animation-timing-function: ease-in-out;} 100%{ background-position: center -82% }}
-@keyframes animated_background_position_key{ 0% { background-position: center 50%; animation-timing-function: ease-in-out;} 100%{ background-position: center -82% }}
-
-/*------------------------------------
-	-----END--------
-------------------------------------*/
-
-
-
-
-/*------------------------------------
 	SIDE FLIP ANIMATION
 ------------------------------------*/
 

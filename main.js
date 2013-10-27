@@ -55,7 +55,6 @@ function animate_flip(arrow_click, flip){
             'border-top-width': $(window).height()
         });
         flip
-            .addClass('animated_background_position')
             .css('top', $(window).height())
         ;
     }
