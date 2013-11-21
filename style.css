@@ -86,12 +86,14 @@ a{
 .side.left{
     background-image: url('bilder/goodbye_01.png');
     background-position: right center;
+    border-right: 1px dashed #9d9d9c;
     left: 0;
 }
 
 .side.right{
     background-image: url('bilder/goodbye_03.png');
     background-position: left center;
+    border-left: 1px dashed #9d9d9c;
     right: 0;
 }
 
@@ -110,12 +112,10 @@ a{
     background-size: 15.1%;
     background-attachment: fixed;
     position: absolute;
-    width: 100%;
+    width: 99.25%;
     height: 100%;
-    border-left: 1px dashed #9d9d9c;
-    border-right: 1px dashed #9d9d9c;
     top: 0;
-
+    left: 0.5%;
     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
     -ms-transition: all 1s ease-in-out;
