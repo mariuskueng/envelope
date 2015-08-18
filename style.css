@@ -84,13 +84,13 @@ a{
     background-size: 31.5% auto;
 }
 .side.left{
-    background-image: url('Bilder/goodbye_01.png');
+    background-image: url('./Bilder/Goodbye_01.png');
     background-position: right center;
     left: 0;
 }
 
 .side.right{
-    background-image: url('Bilder/goodbye_03.png');
+    background-image: url('./Bilder/Goodbye_03.png');
     background-position: left center;
     right: 0;
 }
@@ -105,7 +105,7 @@ a{
 }
 
 .flip{
-    background-image: url('Bilder/goodbye_02.png');
+    background-image: url('./Bilder/Goodbye_02.png');
     background-position: center 50%;
     background-size: 15.1%;
     background-attachment: fixed;
